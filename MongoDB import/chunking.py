@@ -1,4 +1,4 @@
-# Install 'pip install pymongo'
+# Install 'pip install pymongo'https://github.com/aziz-usenov1/Term-2/blob/main/chunking.py
 
 from pymongo import MongoClient
 import json
