@@ -14,7 +14,7 @@ This section showcases the workflow for transforming, splitting, and integrating
     - [companies_part2.json](MongoDB%20import/JSON%20output/companies_part2.json)
     - [companies_part3.json](MongoDB%20import/JSON%20output/companies_part3.json)
     - [companies_part4.json](MongoDB%20import/JSON%20output/companies_part4.json)
-- **Data Import to MongoDB:**
+- **Data Import to MongoDB:** [chunking.py](MongoDB%20import/chunking.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
     - need `database name` labeled as `db`
