@@ -17,7 +17,7 @@ This section showcases the workflow for transforming, splitting, and integrating
 - **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
-    - need `password` within connectin string as `de_2_term_2`
+    - need `password` within `connectin string` as `de_2_term_2`
     - need `database name` labeled as `db`
     - need `folder name` labeled as `collection`
 - **KNIME Workflow Integration:**
