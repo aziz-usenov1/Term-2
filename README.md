@@ -8,13 +8,13 @@ This section showcases the workflow for transforming, splitting, and integrating
 - **CSV to JSON Conversion:** [converter.py](MongoDB%20import/converter.py) 
   - Extracting relevant columns (`company_id` and `description`) from a [company.csv](MongoDB%20import/CSV%20files/companies.csv) file
   - Converting the data into a JSON format suitable for MongoDB
-- **JSON Chunking:** [chunking.py](MongoDB%20import/chunking.py)
+- **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Splitting the JSON file into 4 smaller chunks to adhere to MongoDB's 16MB document size limit
     - [companies_part1.json](MongoDB%20import/JSON%20output/companies_part1.json)
     - [companies_part2.json](MongoDB%20import/JSON%20output/companies_part2.json)
     - [companies_part3.json](MongoDB%20import/JSON%20output/companies_part3.json)
     - [companies_part4.json](MongoDB%20import/JSON%20output/companies_part4.json)
-- **Data Import to MongoDB:** [chunking.py](MongoDB%20import/chunking.py)
+- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
     - need `database name` labeled as `db`
