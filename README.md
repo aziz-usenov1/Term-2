@@ -1,5 +1,38 @@
+<a id="readme-top"></a>
+
 # Term-2
 Linkedin Job Postings
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+      <!--Please adjust accordingly by adding content link by adding <li></li> -->
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
+    </li>
+  </ol>
+</details>
+
+### About The Project
+bla bla bla
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* ![Python][Python.url]
+* ![MongoDB][MongoDB.url]
+* ![Azure][Azure.url]
+* ![MySQLWorkbench][MySQL.url]
+* ![Knime][Knime.url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### MongoDB Data Integration Workflow
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
@@ -33,3 +66,14 @@ This section showcases the workflow for transforming, splitting, and integrating
       - `description` (*string*): Textual description of the company.
     - **Required Fields:**
       - Each object in the array must include both `company_id` and `description`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+     
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[MySQL.url]: https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
+[Python.url]:https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[MongoDB.url]:https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[Knime.url]:https://img.shields.io/badge/knime-FFA500?style=for-the-badge&logo=knime&logoColor=white
+[Azure.url]:https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white
+
