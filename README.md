@@ -125,17 +125,24 @@ The BLS API data reveals notable differences compared to LinkedIn hourly wages:
 This project demonstrates the integration of the BLS API for wage analysis and highlights its value in comparing data across different platforms. The observed wage differences underscore the importance of contextualizing salary data based on the source.
 
 ### Hypothesis Analysis
+
 We state the following three hypotheses:
-Hypothesis 1. Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
 
-Based on the pie chart, senior-level roles are the least likely to offer remote work options, supporting the hypothesis that senior roles are less likely to provide remote work opportunities compared to entry- and mid-level positions.
+**Hypothesis 1**. Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
 
-Hypothesis 2. SQL is more frequently required in IT and data-centric industries such as finance, healthcare, and e-commerce compared to other sectors.
+![hypothesis1](https://github.com/user-attachments/assets/4d0acc4b-7e76-473f-b5f8-a78e800f9795)
 
-The bubble chart shows that SQL is highly demanded in industries like IT Services and Software Development, with significant representation in data-centric sectors such as Financial Services and Healthcare. Thus, it supports the stated hypothesis.
+_Conclusion_: Based on the pie chart, senior-level roles are the least likely to offer remote work options, supporting the hypothesis that senior roles are less likely to provide remote work opportunities compared to entry- and mid-level positions.
 
-Hypothesis 3. Do we move API here? 
+**Hypothesis 2**. SQL is more frequently required in IT and data-centric industries such as finance, healthcare, and e-commerce compared to other sectors.
 
+![hypothesis2](https://github.com/user-attachments/assets/f27fb5fb-ed89-4e60-8c80-5e7806f5ee96)
+
+_Conclusion_: The bubble chart shows that SQL is highly demanded in industries like IT Services and Software Development, with significant representation in data-centric sectors such as Financial Services and Healthcare. Thus, it supports the stated hypothesis.
+
+**Hypothesis 3**. Do we move API here? 
+
+_Conclusion_:
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
