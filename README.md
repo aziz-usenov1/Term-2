@@ -16,6 +16,9 @@ Linkedin Job Postings
     <li>
       <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
     </li>
+    <li>
+      <a href="#bls-api-wage-analysis">BLS API Wage Analysis: State-Level Hourly Wage Comparison</a>
+    </li>
   </ol>
 </details>
 
@@ -66,8 +69,10 @@ This section showcases the workflow for transforming, splitting, and integrating
       - `description` (*string*): Textual description of the company.
     - **Required Fields:**
       - Each object in the array must include both `company_id` and `description`
+     
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### BLS API Wage Analysis: State-Level Hourly Wage Comparison
+### BLS API Wage Analysis
 This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly wage data for 2023 across U.S. states. The analysis compares this data with average hourly wages from LinkedIn, providing insights into discrepancies and trends between federal economic data and a professional job platform.
 
 **Process**
@@ -88,6 +93,37 @@ This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly w
   - **Validation:** 
     - Identified and excluded outliers (e.g., salaries above $500/hour) to maintain accurate analysis.
     - Formatted data for readability.
+
+**Results**
+
+*State-Level Comparison*
+The BLS API data reveals notable differences compared to LinkedIn hourly wages:
+  - Key States with Large Differences
+    - Alaska: LinkedIn wages are 63.86% higher than BLS.
+    - Iowa: LinkedIn wages are 63.15% higher than BLS.
+    - District of Columbia: BLS wages slightly exceed LinkedIn (-2.29%).
+   
+*National Average*
+- **LinkedIn Average Hourly Salary:** $40.80
+- **BLS Average Hourly Salary:** $32.75
+- **Difference (Units):** $8.05
+- **Difference (%):** 24.58%
+
+*Interpretation of Results*
+- **BLS API Data vs LinkedIn:**
+    - LinkedIn data shows consistently higher wages due to its focus on professional and specialized roles.
+    - BLS data, representing all industries and roles, provides a broader but lower average.
+- **Regional Trends:**
+    - States with high LinkedIn premiums (e.g., Alaska, Iowa) highlight demand for professionals in certain regions.
+    - Discrepancies vary widely by state, influenced by local economies and job markets.
+- **Data Limitations:**
+    - Scope Differences: BLS captures a broad workforce; LinkedIn focuses on higher-paying jobs.
+    - Data Cleaning: Outliers were removed to maintain data integrity.
+
+**Conclusion**
+
+This project demonstrates the integration of the BLS API for wage analysis and highlights its value in comparing data across different platforms. The observed wage differences underscore the importance of contextualizing salary data based on the source.
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
