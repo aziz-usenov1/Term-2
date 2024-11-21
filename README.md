@@ -67,8 +67,32 @@ This section showcases the workflow for transforming, splitting, and integrating
     - **Required Fields:**
       - Each object in the array must include both `company_id` and `description`
 
+### BLS API Wage Analysis: State-Level Hourly Wage Comparison
+This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly wage data for 2023 across U.S. states. The analysis compares this data with average hourly wages from LinkedIn, providing insights into discrepancies and trends between federal economic data and a professional job platform.
+
+**Process**
+
+- **Data Sources**
+  - **BLS API:** Provides official hourly wage data for all U.S. states.
+  - **LinkedIn Data:** Contains average hourly salary information by state for professional roles.
+- **Steps in the Analysis**
+  - **API Integration:**
+    - Queried the BLS API for 2023 hourly wage data using state-specific series IDs.
+    - Extracted and organized the data into a Pandas DataFrame.
+  - **Data Preparation:** 
+    - Mapped state names between the LinkedIn and BLS datasets to ensure consistency.
+    - Processed the LinkedIn dataset to calculate state-level average hourly wages.
+  - **Comparison:** 
+    - Merged BLS and LinkedIn datasets on state names.
+    - Calculated absolute `(Difference (Units))` and percentage `(Difference (%))` differences in wages.
+  - **Validation:** 
+    - Identified and excluded outliers (e.g., salaries above $500/hour) to maintain accurate analysis.
+    - Formatted data for readability.
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-     
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [MySQL.url]: https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
