@@ -140,10 +140,10 @@ _Conclusion_: Based on the pie chart, senior-level roles are the least likely to
 
 _Conclusion_: The bubble chart shows that SQL is highly demanded in industries like IT Services and Software Development, with significant representation in data-centric sectors such as Financial Services and Healthcare. Thus, it supports the stated hypothesis.
 
-**Hypothesis 3**. Do we move API here? 
+**Hypothesis 3**. LinkedIn wages are consistently higher than BLS wages across all U.S. states due to a focus on professional roles.
 
-_Conclusion_:
 
+_Conclusion_: The analysis demonstrates that LinkedIn consistently reports higher average hourly wages compared to the BLS across most U.S. states. This aligns with the hypothesis that LinkedIn focuses on professional and specialized roles, which typically offer higher wages. On a national level, LinkedIn wages are 24.58% higher than BLS wages, further supporting the idea that LinkedIn caters to higher-paying industries and job markets.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
