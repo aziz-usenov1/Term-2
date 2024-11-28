@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Model Set",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "job_id": {
+        "type": "string"
+      },
+      "skills_desc": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "job_id",
+      "skills_desc"
+    ],
+    "title": "Model"
+  }
+}
