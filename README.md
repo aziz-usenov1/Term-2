@@ -17,7 +17,7 @@ Linkedin Job Postings
       <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
     </li>
     <li>
-      <a href="#bls-api-wage-analysis">BLS API Wage Analysis: State-Level Hourly Wage Comparison</a>
+      <a href="#hypothesis-analysis">Hypothesis Analysis</a>
     </li>
   </ol>
 </details>
@@ -72,57 +72,6 @@ This section showcases the workflow for transforming, splitting, and integrating
      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### BLS API Wage Analysis
-This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly wage data for 2023 across U.S. states. The analysis compares this data with average hourly wages from LinkedIn, providing insights into discrepancies and trends between federal economic data and a professional job platform.
-
-**Process**
-
-- **Data Sources**
-  - **BLS API:** Provides official hourly wage data for all U.S. states.
-  - **LinkedIn Data:** Contains average hourly salary information by state for professional roles.
-- **Steps in the Analysis**
-  - **API Integration:**
-    - Queried the BLS API for 2023 hourly wage data using state-specific series IDs.
-    - Extracted and organized the data into a Pandas DataFrame.
-  - **Data Preparation:** 
-    - Mapped state names between the LinkedIn and BLS datasets to ensure consistency.
-    - Processed the LinkedIn dataset to calculate state-level average hourly wages.
-  - **Comparison:** 
-    - Merged BLS and LinkedIn datasets on state names.
-    - Calculated absolute `(Difference (Units))` and percentage `(Difference (%))` differences in wages.
-  - **Validation:** 
-    - Identified and excluded outliers (e.g., salaries above $500/hour) to maintain accurate analysis.
-    - Formatted data for readability.
-
-**Results**
-
-*State-Level Comparison*
-The BLS API data reveals notable differences compared to LinkedIn hourly wages:
-  - Key States with Large Differences
-    - Alaska: LinkedIn wages are 63.86% higher than BLS.
-    - Iowa: LinkedIn wages are 63.15% higher than BLS.
-    - District of Columbia: BLS wages slightly exceed LinkedIn (-2.29%).
-   
-*National Average*
-- **LinkedIn Average Hourly Salary:** $40.80
-- **BLS Average Hourly Salary:** $32.75
-- **Difference (Units):** $8.05
-- **Difference (%):** 24.58%
-
-*Interpretation of Results*
-- **BLS API Data vs LinkedIn:**
-    - LinkedIn data shows consistently higher wages due to its focus on professional and specialized roles.
-    - BLS data, representing all industries and roles, provides a broader but lower average.
-- **Regional Trends:**
-    - States with high LinkedIn premiums (e.g., Alaska, Iowa) highlight demand for professionals in certain regions.
-    - Discrepancies vary widely by state, influenced by local economies and job markets.
-- **Data Limitations:**
-    - Scope Differences: BLS captures a broad workforce; LinkedIn focuses on higher-paying jobs.
-    - Data Cleaning: Outliers were removed to maintain data integrity.
-
-**Conclusion**
-
-This project demonstrates the integration of the BLS API for wage analysis and highlights its value in comparing data across different platforms. The observed wage differences underscore the importance of contextualizing salary data based on the source.
 
 ### Hypothesis Analysis
 
@@ -142,6 +91,8 @@ _Conclusion_: The bubble chart shows that SQL is highly demanded in industries l
 
 **Hypothesis 3**. LinkedIn wages are consistently higher than BLS wages across all U.S. states due to a focus on professional roles.
 
+![hypothesis3](https://github.com/GuillermoLeal95/attachments/blob/f7335c4018cff234bd8630c7b99a9fbe356d6921/linkedin_vs_blsBarChart.jpg)
+![hypothesis3(2)](https://github.com/GuillermoLeal95/attachments/blob/16e799bdad4908c54c384b4b5e2411df545e0173/linkedin_vs_blsBubbleChart.jpg)
 
 _Conclusion_: The analysis demonstrates that LinkedIn consistently reports higher average hourly wages compared to the BLS across most U.S. states. This aligns with the hypothesis that LinkedIn focuses on professional and specialized roles, which typically offer higher wages. On a national level, LinkedIn wages are 24.58% higher than BLS wages, further supporting the idea that LinkedIn caters to higher-paying industries and job markets.
 
