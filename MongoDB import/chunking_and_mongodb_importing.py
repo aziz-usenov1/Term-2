@@ -28,7 +28,7 @@ collection_skills = db['skills']
 
 # Upload JSON data
 
-# Single JSON to collection
+# Single JSON to collection: skills description to be uploaded to skills collection
 def upload_single_file(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
@@ -38,7 +38,7 @@ def upload_single_file(filename):
 filename = 'skills.json'
 upload_single_file(filename)
 
-# Multiple JSON to collection
+# Multiple JSON to collection: company description to be uploaded to companies collection
 def upload_multiple_files(file_list):
     for filename in file_list:
         with open(filename, 'r') as f:
