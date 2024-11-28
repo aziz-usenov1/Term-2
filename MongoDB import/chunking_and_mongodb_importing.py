@@ -21,7 +21,8 @@ print("JSON file has been split into 4 parts.")
 
 
 # Connect to MongoDB Atlas
-client = MongoClient("mongodb+srv://azizusenov1:de_1_term_2@cluster0.osgak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+# password is hidden
+client = MongoClient("mongodb+srv://azizusenov1:<password>@cluster0.osgak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client['linkedin_companies']
 collection_companies = db['companies']
 collection_skills = db['skills']
