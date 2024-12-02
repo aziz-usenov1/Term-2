@@ -17,10 +17,7 @@ Linkedin Job Postings
       <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
     </li>
     <li>
-      <a href="#azure-setup">Data Setup on the cloud: Azure</a>
-    </li>
-    <li>
-      <a href="#local-database-mysql">Local Database Setup MySQL Workbench</a>
+      <a href="#azure-setup">Data Setup on the cloud (Azure) and MySQL Workbench</a>
     </li>
     <li>
       <a href="#knime">Knime Workflow</a>
@@ -83,6 +80,135 @@ This section showcases the workflow for transforming, splitting, and integrating
       - Each object in the array must include both `company_id`, `job_id`, `skills_desc`, `description` for company and `description`for post
      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Data Setup on the cloud (Azure) and MySQL Workbench
+ 
+This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
+1. Using a local MySQL database for initial work and analysis for the purpose of cost saving.  
+2. Migrating to an Azure SQL Database for collaborative work and delivery.
+
+
+### Prerequisites
+
+#### Tools and Resources
+- **Azure SQL Database Free Tier** (registered via a Student Account).
+- **Azure Data Studio** (for data import and schema modifications).
+- **MySQLWorkbench** (for setting up a local database).
+- **Kaggle Dataset**
+    
+### Workflow Summary
+
+#### Stage 1: Setup Local MySQL Database
+1. Download and prepare dataset csv files.
+2. Create and populate a MySQL database locally using MySQL Workbench.
+
+#### Stage 2: Transition to Azure SQL Database
+1. Import datasets into Azure SQL Database using Azure Data Studio.
+2. Optimize Azure SQL resource usage:
+   - Clear all the work sessions to allow  **auto-pause** for cost-efficiency.
+   - Monitor resource consumption effectively.
+3. Establish connection between KNIME and Azure SQL Database for collaborative work.
+    
+### Detailed Steps
+
+#### Stage 1: Setup Local MySQL Database
+
+##### Step 1.1: Download Dataset
+- Go to the [LinkedIn Job Postings Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) on Kaggle.
+- Download the dataset, which consists of 11 CSV files.
+- Extract all files into `/private/tmp`. (#TODD add secure == ON == 1 .... later)
+
+##### Step 1.2: Install and Configure MySQL Workbench
+1. Open MySQLWorkbench and set up a local connection:
+   - **Host**: `localhost`
+   - **Port**: `3306`
+   - **Username**: (default `root` or your chosen username)
+   - **Password**: (set during MySQL installation)
+3. Create a new database schema for the project:
+   ```sql
+   CREATE SCHEMA LinkedInJobs;
+   ```
+
+##### Step 1.3: Import CSV Files
+1. In MySQL Workbench, navigate to **Server > Data Import**.
+2. Select **Import from CSV file** and upload each CSV file into a corresponding table.
+3. Data populating:
+    - Create tables, example:
+     ```sql 
+     CREATE TABLE job_postings (
+         job_id INT NOT NULL,
+         title VARCHAR(255),
+         location VARCHAR(255),
+         company VARCHAR(255),
+         date_posted DATE,
+         PRIMARY KEY (job_id)
+     );
+     ```
+    - Data ingestion, example:
+
+    ``` sql
+    LOAD DATA INFILE '/private/tmp/companies.csv'
+    INTO TABLE companies
+    FIELDS TERMINATED BY ','  
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\r\n'
+    IGNORE 1 LINES
+    (@company_id, @name, @description, @company_size, @state, @country, @city, @zip_code, @address, @url)
+    SET
+    company_id = @company_id,
+    name = LEFT(NULLIF(@name, ''), 255),
+    description = LEFT(NULLIF(@description, ''), 2999),
+    company_size = LEFT(NULLIF(@company_size, ''), 255),
+    state = LEFT(NULLIF(@state, ''), 255),
+    country = LEFT(NULLIF(@country, ''), 255),
+    city = LEFT(NULLIF(@city, ''), 255),
+    zip_code = LEFT(NULLIF(@zip_code, ''), 100),
+    address = LEFT(NULLIF(@address, ''), 255),
+    url = LEFT(NULLIF(@url, ''), 255);
+    
+    ```
+     
+##### Verify the data integrity by querying each table:
+   ```sql
+   SELECT * FROM job_postings LIMIT 10;
+   ```
+    
+#### Stage 2: Transition to Azure SQL Database
+
+##### Step 2.1: Configure Azure SQL Database
+1. **Create Azure SQL Database**:
+   - Log in to the [Azure Portal](https://portal.azure.com/).
+   - Navigate to **SQL Databases > Create**.
+   - Use the **Free Tier (vCore-based)** for student accounts:
+     - Set up a resource group.
+     - Select a logical server name, `LinkedIn_Jobs`.
+   - Set up admin login credentials.
+2. Save connection details (server name, admin username, and password).
+
+#### Step 2.2: Install Azure Data Studio
+1. Download and install Azure Data Studio from the [official website](https://learn.microsoft.com/en-us/sql/azure-data-studio/).
+2. Set up a connection to your Azure SQL Database:
+   - Server: `{your_server_name}.database.windows.net`
+   - Authentication: SQL Login
+   - Username: `{admin_username}`
+   - Password: `{admin_password}`
+
+#### Step 2.3: Import CSV Files into Azure
+1. Use Azure Data Studio's Import Wizard:
+   - Right-click on the database and select **Import Wizard**.
+   - Upload each CSV file one at a time.
+   - Map columns to appropriate data types during the import process.
+2. Verify each table and column using SQL queries:
+   ```sql
+   SELECT TOP (10) * FROM dbo.job_postings;
+   ```
+
+#### Step 2.4: Optimize Resource Usage
+1. Clear working sessions to allow **auto-pause**
+    - Free-tire does not offer configured auto-pause settion. One must disconnect all the working sessions to make sure can server meets the standard of auto-pausing to save free-tire resources.
+2. Monitor resource usage:
+   - Use the **Performance Overview** in Azure Portal.
+   - Check DTU/vCore consumption periodically.
 
 
 ### Hypothesis Analysis
