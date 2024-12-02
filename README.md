@@ -1,7 +1,8 @@
 <a id="readme-top"></a>
 
 # Term-2
-Linkedin Job Postings
+## Linkedin Job Postings Analysis
+<img src="https://github.com/user-attachments/assets/335fd936-b82c-4419-bd29-c0cf0f9077d6" alt="Linkedin" width="400" height="300" align="center">
 
 <center>
 <details open>
@@ -347,7 +348,7 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 
 ## Summary
 
-In general, this project succeeded in working with Azure, MongoDB, a local MySQL database, API data extraction, and KNIME, along with preprocessing techniques - data cleaning and algorithms of cosine similarity and clustering of industry names for creating common categories both for LinkedIn and API-based data - in all hypotheses proved right according to the analysis.
+In general, this project succeeded in working with Azure, MongoDB, a local MySQL database, API data extraction, and KNIME, along with preprocessing techniques - *data cleaning and algorithms of cosine similarity and clustering of industry names for creating common categories both for LinkedIn and API-based data* - in all hypotheses proved right according to the analysis.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
