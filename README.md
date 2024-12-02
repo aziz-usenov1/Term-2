@@ -81,8 +81,7 @@ This section showcases the workflow for transforming, splitting, and integrating
      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Data Setup on the cloud (Azure) and MySQL Workbench
- 
+### Data Setup on the cloud (Azure) and MySQL Workbench 
 This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
 1. Using a local MySQL database for initial work and analysis for the purpose of cost saving.  
 2. Migrating to an Azure SQL Database for collaborative work and delivery.
