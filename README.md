@@ -190,7 +190,7 @@ This section showcases the workflow for transforming, splitting, and integrating
   - Extracting relevant columns from a respective file
   - Converting the data into a JSON format suitable for MongoDB
 - **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
-  - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
+  - Splitting the JSON file into *`N`* smaller chunks to adhere to MongoDB's 16MB document size limit
 - **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
