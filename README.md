@@ -300,13 +300,13 @@ This section showcases the workflow for transforming, splitting, and integrating
 <hr>
 
 ## Knime Workflow
-❗️**The comprehensive view of Knime Workflow with necessary `nodes` to execute is provided below:**
+❗️**The comprehensive view of Knime Workflow with necessary `nodes` to execute and info about each block in the workflow is provided below:**
 
 ![knime](https://github.com/user-attachments/assets/9c19e588-d640-4183-b75b-ae47ff376157)
 
 ## Hypothesis Analysis
 
-🔸 **We provide the analysis and outputs of the 4 hypotheses we aimed to test through this KNIME workflow. It demonstrates an ETL procedure for all hypotheses to analyze and draw meaningful insights about job trends**
+🔸 **We provide the analysis and outputs of the 4 hypotheses we aimed to test through this KNIME workflow. It demonstrates an ETL procedure for all hypotheses to analyze and draw meaningful insights about job trends.**
 
 We state the following *<ins>4 hypotheses</ins>*:
 
@@ -344,6 +344,7 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 <hr>
 
 ## Summary
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
