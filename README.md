@@ -3,7 +3,7 @@
 # Term-2
 Linkedin Job Postings
 
-<div style="text-align: center;">
+<center>
 <details open>
   <summary>Table of Contents</summary>
   <ol>
@@ -25,7 +25,8 @@ Linkedin Job Postings
     </li>
   </ol>
 </details>
-</div>
+</center>
+
 <hr> 
 
 ### About The Project
