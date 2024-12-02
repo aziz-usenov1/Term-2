@@ -80,7 +80,7 @@ This README provides a comprehensive guide on how we processed relational data f
 ### Detailed Steps
 
 #### Stage 1: Setup Local MySQL Database
-
+#### 🔴 SQL workfile for creating Local Database: [MySQL Workbench](MySQL%20database/localdb.sql)
 ##### Step 1.1: Download Dataset
 - Go to the [LinkedIn Job Postings Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) on Kaggle.
 - Download the dataset, which consists of 11 CSV files.
@@ -185,8 +185,6 @@ This README provides a comprehensive guide on how we processed relational data f
 #### Step 3: Connection to KNIME
 
 This section details the process of connecting both the local MySQL database and Azure SQL Database to KNIME Analytics Platform. These steps include downloading drivers, setting up configurations, and performing test queries.
-
----
 
 #### **Step 3.1: Connecting KNIME to Local MySQL Database**
 
