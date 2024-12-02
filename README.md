@@ -60,7 +60,7 @@ This section showcases the workflow for transforming, splitting, and integrating
 
 **The main tasks include:**
 - **CSV to JSON Conversion:** [converter.py](MongoDB%20import/converter.py) 
-  - Extracting relevant columns (`company_id` and `description`) from a [company.csv](MongoDB%20import/CSV%20files/companies.csv) file
+  - Extracting relevant columns from a respective file
   - Converting the data into a JSON format suitable for MongoDB
 - **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
