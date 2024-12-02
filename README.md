@@ -38,6 +38,12 @@ As a means of widening the scope of analysis, the project pulls in Bureau of Lab
 
 This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
+**We will test four hypotheses throughout the analysis process and present the outputs using the KNIME workflow and charts:**
+- Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
+- SQL is more frequently required in IT and data-centric industries such as finance, healthcare, and e-commerce compared to other sectors.
+- LinkedIn wages are consistently higher than BLS wages across all U.S. states due to a focus on professional roles.
+- LinkedIn-reported wages are consistently higher than BLS wages across key industries due to LinkedIn's focus on specialized, professional, and high-demand roles, compared to the broader coverage of the BLS data.
+
 ## Built With
 
 * ![Python][Python.url]
