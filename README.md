@@ -3,6 +3,7 @@
 # Term-2
 Linkedin Job Postings
 
+<div style="text-align: center;">
 <details open>
   <summary>Table of Contents</summary>
   <ol>
@@ -24,7 +25,7 @@ Linkedin Job Postings
     </li>
   </ol>
 </details>
-
+</div>
 <hr> 
 
 ### About The Project
@@ -212,6 +213,37 @@ This section showcases the workflow for transforming, splitting, and integrating
 <hr>
 
 ### Knime Workflow
+
+### Hypothesis Analysis
+
+We state the following three hypotheses:
+
+**Hypothesis 1**. Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
+
+![hypothesis1](https://github.com/user-attachments/assets/4d0acc4b-7e76-473f-b5f8-a78e800f9795)
+
+_Conclusion_: Based on the pie chart, senior-level roles are the least likely to offer remote work options, supporting the hypothesis that senior roles are less likely to provide remote work opportunities compared to entry- and mid-level positions.
+
+**Hypothesis 2**. SQL is more frequently required in IT and data-centric industries such as finance, healthcare, and e-commerce compared to other sectors.
+
+![hypothesis2](https://github.com/user-attachments/assets/f27fb5fb-ed89-4e60-8c80-5e7806f5ee96)
+
+_Conclusion_: The bubble chart shows that SQL is highly demanded in industries like IT Services and Software Development, with significant representation in data-centric sectors such as Financial Services and Healthcare. Thus, it supports the stated hypothesis.
+
+**Hypothesis 3**. LinkedIn wages are consistently higher than BLS wages across all U.S. states due to a focus on professional roles.
+
+![hypothesis3](https://github.com/GuillermoLeal95/attachments/blob/afad0595a7c0dbe5f4b039d7db3c62710d3d1f7b/State%20LindekIn%20vs%20BLS.jpg)
+
+_Conclusion_: The analysis demonstrates that LinkedIn consistently reports higher average hourly wages compared to the BLS across most U.S. states. This aligns with the hypothesis that LinkedIn focuses on professional and specialized roles, which typically offer higher wages. On a national level, LinkedIn wages are 24.58% higher than BLS wages, further supporting the idea that LinkedIn caters to higher-paying industries and job markets.
+
+**Hypothesis 4**. LinkedIn-reported wages are consistently higher than BLS wages across key industries due to LinkedIn's focus on specialized, professional, and high-demand roles, compared to the broader coverage of the BLS data.
+
+![hypothesis3](https://github.com/GuillermoLeal95/attachments/blob/afad0595a7c0dbe5f4b039d7db3c62710d3d1f7b/Industry%20LinkedIn%20vs%20BLS.jpg)
+
+_Conclusion_: The analysis reveals that LinkedIn consistently reports higher average hourly wages compared to the BLS across the selected industries. This supports the hypothesis that LinkedIn data focuses on specialized and professional roles, which command higher wages. Industries such as Professional and Business Services and General Manufacturing show significant differences, indicating a disparity between LinkedIn's professional-oriented dataset and the broader scope of the BLS. These findings emphasize the importance of considering data sources' scope when analyzing wage trends.
+
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
+
 
 
 <hr>
