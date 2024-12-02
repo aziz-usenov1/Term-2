@@ -3,6 +3,7 @@
 # Term-2
 Linkedin Job Postings
 
+<center>
 <details open>
   <summary>Table of Contents</summary>
   <ol>
@@ -24,8 +25,11 @@ Linkedin Job Postings
     </li>
   </ol>
 </details>
+</center>
 
-### About The Project
+<hr> 
+
+## About The Project
 The project provides a comprehensive analysis of jobs advertised on LinkedIn through a multi-platform data aggregation methodology to draw meaningful insights. The dataset is retrived from [Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data), and is undergone advanced data processing and analytical workflows. 
 
 The dataset has been uploaded into Azure to support scalable cloud-based solutions. In addition, a minor portion of the data is being stored in MongoDB for text analysis and exploration purposes. Because Azure services are quite costly, a cost-efficient local database has been established with MySQL Workbench for storage and queries.
@@ -34,7 +38,7 @@ As a means of widening the scope of analysis, the project pulls in Bureau of Lab
 
 This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
-### Built With
+## Built With
 
 * ![Python][Python.url]
 * ![MongoDB][MongoDB.url]
@@ -44,7 +48,9 @@ This KNIME Workflow also covers all the ETL processes of all these data sources 
 
 <p align="right">(<a href="#readme-top"> 🔝 back to top</a>)</p>
 
-### Data Setup on the cloud (Azure) and MySQL Workbench 
+<hr>
+
+## Data Setup on the cloud (Azure) and MySQL Workbench 
 This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
 1. Using a local MySQL database for initial work and analysis for the purpose of cost saving.  
 2. Migrating to an Azure SQL Database for collaborative work and delivery.
@@ -73,8 +79,8 @@ This README provides a comprehensive guide on how we processed relational data f
     
 ### Detailed Steps
 
-#### Stage 1: Setup Local MySQL Database
-
+#### 🔸 Stage 1: Setup Local MySQL Database
+#### 🔴 SQL workfile for creating Local Database: [MySQL Workbench](MySQL%20database/localdb.sql)
 ##### Step 1.1: Download Dataset
 - Go to the [LinkedIn Job Postings Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) on Kaggle.
 - Download the dataset, which consists of 11 CSV files.
@@ -134,8 +140,10 @@ This README provides a comprehensive guide on how we processed relational data f
    ```sql
    SELECT * FROM job_postings LIMIT 10;
    ```
-    
-#### Stage 2: Transition to Azure SQL Database
+#### ERR Diagram
+![EER Diagram](https://github.com/user-attachments/assets/6dff872d-b08c-4570-9a18-fce6ef1693a1)
+
+#### 🔸 Stage 2: Transition to Azure SQL Database
 
 ##### Step 2.1: Configure Azure SQL Database
 1. **Create Azure SQL Database**:
@@ -147,15 +155,16 @@ This README provides a comprehensive guide on how we processed relational data f
    - Set up admin login credentials.
 2. Save connection details (server name, admin username, and password).
 
-#### Step 2.2: Install Azure Data Studio
+##### Step 2.2: Install Azure Data Studio
 1. Download and install Azure Data Studio from the [official website](https://learn.microsoft.com/en-us/sql/azure-data-studio/).
 2. Set up a connection to your Azure SQL Database:
    - Server: `{your_server_name}.database.windows.net`
    - Authentication: SQL Login
    - Username: `{admin_username}`
    - Password: `{admin_password}`
+![azure-server](https://github.com/user-attachments/assets/386eb159-1d53-41af-9298-81595b52d908)
 
-#### Step 2.3: Import CSV Files into Azure
+##### Step 2.3: Import CSV Files into Azure
 1. Use Azure Data Studio's Import Wizard:
    - Right-click on the database and select **Import Wizard**.
    - Upload each CSV file one at a time.
@@ -164,17 +173,89 @@ This README provides a comprehensive guide on how we processed relational data f
    ```sql
    SELECT TOP (10) * FROM dbo.job_postings;
    ```
+![azure-db](https://github.com/user-attachments/assets/f9c89fbf-c464-4ad8-b7ef-e944132d7122)
 
-#### Step 2.4: Optimize Resource Usage
+##### Step 2.4: Optimize Resource Usage
 1. Clear working sessions to allow **auto-pause**
     - Free-tire does not offer configured auto-pause settion. One must disconnect all the working sessions to make sure can server meets the standard of auto-pausing to save free-tire resources.
 2. Monitor resource usage:
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
-  
+
+#### 🔸 Step 3: Connection to KNIME
+
+This section details the process of connecting both the local MySQL database and Azure SQL Database to KNIME Analytics Platform. These steps include downloading drivers, setting up configurations, and performing test queries.
+
+#### **Step 3.1: Connecting KNIME to Local MySQL Database**
+
+##### **Download MySQL JDBC Driver**
+1. Download the MySQL Connector/J (JDBC driver) from the [official MySQL website](https://dev.mysql.com/downloads/connector/j/).
+   - Select the appropriate version for your system and download the `.zip` file.
+2. Extract the `.jar` file (e.g., `mysql-connector-java-8.x.x.jar`) from the downloaded archive.
+3. Place the `.jar` file in a known directory for future reference.
+
+##### **Configure KNIME Database Driver**
+1. Open KNIME Analytics Platform.
+2. Navigate to **File > Preferences > KNIME > Databases**.
+3. Add a new database driver:
+   - Click **Add File...** and browse to the `.jar` file downloaded earlier.
+   - Assign an alias, e.g., `MySQL Driver`.
+
+##### **Set Up MySQL Connection Node**
+1. Drag and drop the **Database Connector** node from the KNIME Node Repository onto the workflow canvas.
+2. Configure the node:
+   - **Driver**: Select `MySQL Driver` from the dropdown.
+   - **Database URL**: `jdbc:mysql://localhost:3306/linkedin_jobs`
+     - Replace `linkedin_jobs` with your database name if different.
+   - **Authentication**:
+     - **Username**: Enter the MySQL username (default: `root` or your custom user).
+     - **Password**: Enter the MySQL password.
+3. Click **OK** to save.
+
+##### **Test the Connection**
+1. Connect a **Database Table Selector** node to the **Database Connector**.
+2. Open the configuration of the **Table Selector** node and type a query, e.g.:
+   ```sql
+   SELECT * FROM job_postings LIMIT 10;
+    ```
+
+#### **Step 3.2: Connecting KNIME to Azure SQL Database**
+
+##### **Download Microsoft SQL JDBC Driver**
+1. Download the SQL Server JDBC driver from the [Microsoft website](https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server).
+   - Choose the appropriate `.zip` file for your platform.
+2. Extract the `.jar` file (e.g., `mssql-jdbc-9.x.x.jre8.jar`) from the archive.
+3. Save the `.jar` file to a known directory.
+![driver](https://github.com/user-attachments/assets/8d21901d-c09b-43c7-b616-eab57aa62411)
+
+##### **Configure KNIME Database Driver**
+1. Open KNIME Analytics Platform.
+2. Navigate to **File > Preferences > KNIME > Databases**.
+3. Add a new database driver:
+   - Click **Add File...** and locate the `.jar` file downloaded earlier.
+   - Assign an alias, e.g., `SQL Server Driver`.
+
+##### **Set Up Azure SQL Connection Node**
+1. Drag and drop the **Database Connector** node from the KNIME Node Repository onto the workflow canvas.
+2. Configure the node:
+   - **Driver**: Select `SQL Server Driver` from the dropdown.
+   - **Database URL**: 
+     ```plaintext
+     jdbc:sqlserver://job-posting-2024.database.windows.net:1433;database=LinkedIn_Jobs
+     ```
+     - Replace `job-posting-2024` with your Azure SQL Server name.
+     - Replace `LinkedIn_Jobs` with your database name.
+   - **Authentication**:
+     - **Username**: Enter your Azure SQL admin username.
+     - **Password**: Enter your Azure SQL admin password.
+   - **Dialect**: Use `SQL-92` (default for this driver).
+![sample-output](https://github.com/user-attachments/assets/d63abb62-8919-4cf7-a1de-e021fa3a175e)
+
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
-### MongoDB Data Integration Workflow
+<hr>
+
+## MongoDB Data Integration Workflow
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
 
 **The main tasks include:**
@@ -182,13 +263,18 @@ This section showcases the workflow for transforming, splitting, and integrating
   - Extracting relevant columns from a respective file
   - Converting the data into a JSON format suitable for MongoDB
 - **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
-  - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
+  - Splitting the JSON file into *`N`* smaller chunks to adhere to MongoDB's 16MB document size limit
 - **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
     - need `password` within `connectin string`
     - need `database name` labeled as `db`
     - need `folder name` labeled as `collection`
+- **MongoDB Database Structure**:
+  - The created database is called **`linkedin_companies`** and it has 3 collections (*please see the snapshot below*):
+    - `companies`
+    - `post_description`
+    - `skills`
 - **JSON Schema:**
   - The schema ensures each JSON document adheres to the following structure:
     - **Root Type:** Array, containing objects.
@@ -203,9 +289,15 @@ This section showcases the workflow for transforming, splitting, and integrating
      
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
-### Knime Workflow
+**The Snapshot of MongoDB Cluster**
+![](https://github.com/user-attachments/assets/93b0fc65-caa3-4aec-9374-97b379888e7e)
+<hr>
 
-### Hypothesis Analysis
+## Knime Workflow
+
+![knime](https://github.com/user-attachments/assets/5207fc3a-9e11-4039-9150-9948901be802)
+
+## Hypothesis Analysis
 
 We state the following three hypotheses:
 
@@ -235,7 +327,11 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
-### Summary
+
+
+<hr>
+
+## Summary
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
