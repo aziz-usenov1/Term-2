@@ -205,6 +205,8 @@ This README provides a comprehensive guide on how we processed relational data f
 2. Monitor resource usage:
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Knime Workflow
 
@@ -241,6 +243,8 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 ### Summary
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [MySQL.url]: https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
 [Python.url]:https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
