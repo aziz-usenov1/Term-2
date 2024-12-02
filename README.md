@@ -31,7 +31,7 @@ The dataset has been uploaded into Azure to support scalable cloud-based solutio
 
 As a means of widening the scope of analysis, the project pulls in Bureau of Labor Statistics [(BLS)](https://www.bls.gov/help/hlpforma.htm#C) data using API. This would allow one to drill down into the comparison of official wage data to those of actual company offers appearing on LinkedIn, resulting in deep analysis with reliable outside references. 
 
-This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
+The KNIME Workflow is used throughout the process and it covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
 **We will test four hypotheses throughout the analysis process and present the outputs using the KNIME workflow and charts:**
 - Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
