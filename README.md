@@ -210,6 +210,7 @@ This README provides a comprehensive guide on how we processed relational data f
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
 
+### Knime Workflow
 
 ### Hypothesis Analysis
 
@@ -241,6 +242,7 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Summary
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
