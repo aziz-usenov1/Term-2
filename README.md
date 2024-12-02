@@ -197,6 +197,11 @@ This section showcases the workflow for transforming, splitting, and integrating
     - need `password` within `connectin string`
     - need `database name` labeled as `db`
     - need `folder name` labeled as `collection`
+- **MongoDB Database Structure**:
+  - The created database is called **`linkedin_companies`** and it has 3 collections (*please see the snapshot below*):
+    - `companies`
+    - `post_description`
+    - `skills`
 - **JSON Schema:**
   - The schema ensures each JSON document adheres to the following structure:
     - **Root Type:** Array, containing objects.
@@ -211,6 +216,8 @@ This section showcases the workflow for transforming, splitting, and integrating
      
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
+**The Snapshot of MongoDB Cluster**
+![](https://github.com/user-attachments/assets/93b0fc65-caa3-4aec-9374-97b379888e7e)
 <hr>
 
 ### Knime Workflow
