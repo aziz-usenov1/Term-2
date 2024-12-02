@@ -37,13 +37,11 @@ Linkedin Job Postings
 ### About The Project
 The project provides a comprehensive analysis of jobs advertised on LinkedIn through a multi-platform data aggregation methodology to draw meaningful insights. The dataset is retrived from [Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data), and is undergone advanced data processing and analytical workflows. 
 
-It has uploaded its main dataset into Azure to support scalable cloud-based solutions. In addition, a minor portion of the data is being stored in MongoDB for text analysis and exploration purposes. Because Azure services are quite costly, establishing a local MySQL database with MySQL Workbench is cost-efficient in terms of data storage and queries.
+The dataset has been uploaded into Azure to support scalable cloud-based solutions. In addition, a minor portion of the data is being stored in MongoDB for text analysis and exploration purposes. Because Azure services are quite costly, a cost-efficient local database has been established with MySQL Workbench for storage and queries.
 
-As a means of widening the scope of analysis, the project pulls in Bureau of Labor Statistics [(BLS)](https://www.bls.gov/help/hlpforma.htm#C) data using API. This would allow one to drill down into the comparison of official wage data to those of actual company offers appearing on LinkedIn, resulting in profound analysis with trustworthy outside references. 
+As a means of widening the scope of analysis, the project pulls in Bureau of Labor Statistics [(BLS)](https://www.bls.gov/help/hlpforma.htm#C) data using API. This would allow one to drill down into the comparison of official wage data to those of actual company offers appearing on LinkedIn, resulting in deep analysis with reliable outside references. 
 
-This KNIME Workflow also covers all the ETL processes of all these data sources. This workflow becomes the central place for integrating, transforming, and presenting the data, as it showcases the whole pipeline for data. 
-
-There is detailed documentation on the KNIME Workflow under the KNIME section, demonstrating the whole ETL process and the analysis results achieved for the project.
+This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
