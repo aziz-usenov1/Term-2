@@ -11,10 +11,10 @@ Linkedin Job Postings
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
+      <a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a>
     </li>
     <li>
-      <a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a>
+      <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
     </li>
     <li>
       <a href="#knime-workflow">Knime Workflow</a>
@@ -43,35 +43,6 @@ This KNIME Workflow also covers all the ETL processes of all these data sources 
 * ![Knime][Knime.url]
 
 <p align="right">(<a href="#readme-top"> 🔝 back to top</a>)</p>
-
-### MongoDB Data Integration Workflow
-This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
-
-**The main tasks include:**
-- **CSV to JSON Conversion:** [converter.py](MongoDB%20import/converter.py) 
-  - Extracting relevant columns from a respective file
-  - Converting the data into a JSON format suitable for MongoDB
-- **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
-  - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
-- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
-  - Importing the data into MongoDB through `from pymongo import MongoClient` library
-    - need `connection string` labeled as `client`
-    - need `password` within `connectin string`
-    - need `database name` labeled as `db`
-    - need `folder name` labeled as `collection`
-- **JSON Schema:**
-  - The schema ensures each JSON document adheres to the following structure:
-    - **Root Type:** Array, containing objects.
-    - **Object Properties:**
-      - `company_id` (*string*): Unique identifier for each company.
-      - `job_id` (*string*): Unique identifier for each job.
-      - `description` from <ins>company</ins> (*string*): Textual description of the company.
-      - `description` from <ins>posts</ins> (*string*): Textual description of the post.
-      - `skills_desc` (*string*): Textual description of the skills.
-    - **Required Fields:**
-      - Each object in the array must include both `company_id`, `job_id`, `skills_desc`, `description` for company and `description`for post
-     
-<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 ### Data Setup on the cloud (Azure) and MySQL Workbench 
 This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
@@ -201,6 +172,35 @@ This README provides a comprehensive guide on how we processed relational data f
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
   
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
+
+### MongoDB Data Integration Workflow
+This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
+
+**The main tasks include:**
+- **CSV to JSON Conversion:** [converter.py](MongoDB%20import/converter.py) 
+  - Extracting relevant columns from a respective file
+  - Converting the data into a JSON format suitable for MongoDB
+- **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
+  - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
+- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
+  - Importing the data into MongoDB through `from pymongo import MongoClient` library
+    - need `connection string` labeled as `client`
+    - need `password` within `connectin string`
+    - need `database name` labeled as `db`
+    - need `folder name` labeled as `collection`
+- **JSON Schema:**
+  - The schema ensures each JSON document adheres to the following structure:
+    - **Root Type:** Array, containing objects.
+    - **Object Properties:**
+      - `company_id` (*string*): Unique identifier for each company.
+      - `job_id` (*string*): Unique identifier for each job.
+      - `description` from <ins>company</ins> (*string*): Textual description of the company.
+      - `description` from <ins>posts</ins> (*string*): Textual description of the post.
+      - `skills_desc` (*string*): Textual description of the skills.
+    - **Required Fields:**
+      - Each object in the array must include both `company_id`, `job_id`, `skills_desc`, `description` for company and `description`for post
+     
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 ### Knime Workflow
