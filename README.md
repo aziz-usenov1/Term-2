@@ -3,7 +3,7 @@
 # Term-2
 Linkedin Job Postings
 
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
       <!--Please adjust accordingly by adding content link by adding <li></li> -->
