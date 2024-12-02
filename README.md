@@ -29,7 +29,7 @@ Linkedin Job Postings
 
 <hr> 
 
-### About The Project
+## About The Project
 The project provides a comprehensive analysis of jobs advertised on LinkedIn through a multi-platform data aggregation methodology to draw meaningful insights. The dataset is retrived from [Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data), and is undergone advanced data processing and analytical workflows. 
 
 The dataset has been uploaded into Azure to support scalable cloud-based solutions. In addition, a minor portion of the data is being stored in MongoDB for text analysis and exploration purposes. Because Azure services are quite costly, a cost-efficient local database has been established with MySQL Workbench for storage and queries.
@@ -38,7 +38,7 @@ As a means of widening the scope of analysis, the project pulls in Bureau of Lab
 
 This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
-### Built With
+## Built With
 
 * ![Python][Python.url]
 * ![MongoDB][MongoDB.url]
@@ -50,7 +50,7 @@ This KNIME Workflow also covers all the ETL processes of all these data sources 
 
 <hr>
 
-### Data Setup on the cloud (Azure) and MySQL Workbench 
+## Data Setup on the cloud (Azure) and MySQL Workbench 
 This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
 1. Using a local MySQL database for initial work and analysis for the purpose of cost saving.  
 2. Migrating to an Azure SQL Database for collaborative work and delivery.
@@ -255,7 +255,7 @@ This section details the process of connecting both the local MySQL database and
 
 <hr>
 
-### MongoDB Data Integration Workflow
+## MongoDB Data Integration Workflow
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
 
 **The main tasks include:**
@@ -293,11 +293,11 @@ This section showcases the workflow for transforming, splitting, and integrating
 ![](https://github.com/user-attachments/assets/93b0fc65-caa3-4aec-9374-97b379888e7e)
 <hr>
 
-### Knime Workflow
+## Knime Workflow
 
 ![knime](https://github.com/user-attachments/assets/5207fc3a-9e11-4039-9150-9948901be802)
 
-### Hypothesis Analysis
+## Hypothesis Analysis
 
 We state the following three hypotheses:
 
@@ -331,7 +331,7 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 
 <hr>
 
-### Summary
+## Summary
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
