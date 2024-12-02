@@ -9,9 +9,6 @@ Linkedin Job Postings
       <!--Please adjust accordingly by adding content link by adding <li></li> -->
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
