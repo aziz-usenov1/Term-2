@@ -17,7 +17,7 @@ Linkedin Job Postings
       <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
     </li>
     <li>
-      <a href="#azure-setup">Data Setup on the cloud (Azure) and MySQL Workbench</a>
+      <a href="#azure-setup-mysql">Data Setup on the cloud (Azure) and MySQL Workbench</a>
     </li>
     <li>
       <a href="#knime">Knime Workflow</a>
