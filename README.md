@@ -79,7 +79,7 @@ This README provides a comprehensive guide on how we processed relational data f
     
 ### Detailed Steps
 
-#### Stage 1: Setup Local MySQL Database
+#### 🔸 Stage 1: Setup Local MySQL Database
 #### 🔴 SQL workfile for creating Local Database: [MySQL Workbench](MySQL%20database/localdb.sql)
 ##### Step 1.1: Download Dataset
 - Go to the [LinkedIn Job Postings Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) on Kaggle.
@@ -143,7 +143,7 @@ This README provides a comprehensive guide on how we processed relational data f
 #### ERR Diagram
 ![EER Diagram](https://github.com/user-attachments/assets/6dff872d-b08c-4570-9a18-fce6ef1693a1)
 
-#### Stage 2: Transition to Azure SQL Database
+#### 🔸 Stage 2: Transition to Azure SQL Database
 
 ##### Step 2.1: Configure Azure SQL Database
 1. **Create Azure SQL Database**:
@@ -155,7 +155,7 @@ This README provides a comprehensive guide on how we processed relational data f
    - Set up admin login credentials.
 2. Save connection details (server name, admin username, and password).
 
-#### Step 2.2: Install Azure Data Studio
+##### Step 2.2: Install Azure Data Studio
 1. Download and install Azure Data Studio from the [official website](https://learn.microsoft.com/en-us/sql/azure-data-studio/).
 2. Set up a connection to your Azure SQL Database:
    - Server: `{your_server_name}.database.windows.net`
@@ -164,7 +164,7 @@ This README provides a comprehensive guide on how we processed relational data f
    - Password: `{admin_password}`
 ![azure-server](https://github.com/user-attachments/assets/386eb159-1d53-41af-9298-81595b52d908)
 
-#### Step 2.3: Import CSV Files into Azure
+##### Step 2.3: Import CSV Files into Azure
 1. Use Azure Data Studio's Import Wizard:
    - Right-click on the database and select **Import Wizard**.
    - Upload each CSV file one at a time.
@@ -175,14 +175,14 @@ This README provides a comprehensive guide on how we processed relational data f
    ```
 ![azure-db](https://github.com/user-attachments/assets/f9c89fbf-c464-4ad8-b7ef-e944132d7122)
 
-#### Step 2.4: Optimize Resource Usage
+##### Step 2.4: Optimize Resource Usage
 1. Clear working sessions to allow **auto-pause**
     - Free-tire does not offer configured auto-pause settion. One must disconnect all the working sessions to make sure can server meets the standard of auto-pausing to save free-tire resources.
 2. Monitor resource usage:
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
 
-#### Step 3: Connection to KNIME
+#### 🔸 Step 3: Connection to KNIME
 
 This section details the process of connecting both the local MySQL database and Azure SQL Database to KNIME Analytics Platform. These steps include downloading drivers, setting up configurations, and performing test queries.
 
@@ -219,23 +219,23 @@ This section details the process of connecting both the local MySQL database and
    SELECT * FROM job_postings LIMIT 10;
     ```
 
-Step 3.2: Connecting KNIME to Azure SQL Database
+#### **Step 3.2: Connecting KNIME to Azure SQL Database**
 
-### **Download Microsoft SQL JDBC Driver**
+##### **Download Microsoft SQL JDBC Driver**
 1. Download the SQL Server JDBC driver from the [Microsoft website](https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server).
    - Choose the appropriate `.zip` file for your platform.
 2. Extract the `.jar` file (e.g., `mssql-jdbc-9.x.x.jre8.jar`) from the archive.
 3. Save the `.jar` file to a known directory.
 ![driver](https://github.com/user-attachments/assets/8d21901d-c09b-43c7-b616-eab57aa62411)
 
-### **Configure KNIME Database Driver**
+##### **Configure KNIME Database Driver**
 1. Open KNIME Analytics Platform.
 2. Navigate to **File > Preferences > KNIME > Databases**.
 3. Add a new database driver:
    - Click **Add File...** and locate the `.jar` file downloaded earlier.
    - Assign an alias, e.g., `SQL Server Driver`.
 
-#### **Set Up Azure SQL Connection Node**
+##### **Set Up Azure SQL Connection Node**
 1. Drag and drop the **Database Connector** node from the KNIME Node Repository onto the workflow canvas.
 2. Configure the node:
    - **Driver**: Select `SQL Server Driver` from the dropdown.
