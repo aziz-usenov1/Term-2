@@ -34,8 +34,6 @@ As a means of widening the scope of analysis, the project pulls in Bureau of Lab
 
 This KNIME Workflow also covers all the ETL processes of all these data sources being integrated, transformed, and presented the data, as it showcases the whole pipeline for data. The detailed documentation can be found on the KNIME section.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 * ![Python][Python.url]
@@ -44,7 +42,7 @@ This KNIME Workflow also covers all the ETL processes of all these data sources 
 * ![MySQLWorkbench][MySQL.url]
 * ![Knime][Knime.url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top"> 🔝 back to top</a>)</p>
 
 ### MongoDB Data Integration Workflow
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
@@ -73,7 +71,7 @@ This section showcases the workflow for transforming, splitting, and integrating
     - **Required Fields:**
       - Each object in the array must include both `company_id`, `job_id`, `skills_desc`, `description` for company and `description`for post
      
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 ### Data Setup on the cloud (Azure) and MySQL Workbench 
 This README provides a comprehensive guide on how we processed relational data from Kaggle’s LinkedIn Job Postings dataset across two stages:  
@@ -203,7 +201,7 @@ This README provides a comprehensive guide on how we processed relational data f
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
   
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 ### Knime Workflow
 
@@ -235,13 +233,13 @@ _Conclusion_: The analysis demonstrates that LinkedIn consistently reports highe
 
 _Conclusion_: The analysis reveals that LinkedIn consistently reports higher average hourly wages compared to the BLS across the selected industries. This supports the hypothesis that LinkedIn data focuses on specialized and professional roles, which command higher wages. Industries such as Professional and Business Services and General Manufacturing show significant differences, indicating a disparity between LinkedIn's professional-oriented dataset and the broader scope of the BLS. These findings emphasize the importance of considering data sources' scope when analyzing wage trends.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 ### Summary
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 [MySQL.url]: https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
 [Python.url]:https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
