@@ -20,10 +20,7 @@ Linkedin Job Postings
       <a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a>
     </li>
     <li>
-      <a href="#knime">Knime Workflow</a>
-    </li>
-    <li>
-      <a href="#hypothesis-analysis">Hypothesis Analysis</a>
+      <a href="#knime-workflow">Knime Workflow</a>
     </li>
     <li>
       <a href="#summary">Summary</a>
