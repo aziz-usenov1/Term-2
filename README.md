@@ -1,36 +1,30 @@
 <a id="readme-top"></a>
 
+<div align="center">
+  
 # Term-2
+**Contributors:**
+Azizbek Ussenov, Guillermo Leal, Tatyana Yakushina, Yutong Liang
 ## Linkedin Job Postings Analysis
 <img src="https://github.com/user-attachments/assets/335fd936-b82c-4419-bd29-c0cf0f9077d6" alt="Linkedin" width="400" height="300" align="center">
 
-<center>
 <details open>
   <summary>Table of Contents</summary>
-  <ol>
-      <!--Please adjust accordingly by adding content link by adding <li></li> -->
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a>
-    </li>
-    <li>
-      <a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a>
-    </li>
-    <li>
-      <a href="#knime-workflow">Knime Workflow</a>
-    </li>
-    <li>
-      <a href="#summary">Summary</a>
-    </li>
-  </ol>
+  <div align="center">
+    <p></p><a href="#about-the-project">About The Project</a></p>
+    <p></p><a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a></p>
+    <p></p><a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a></p>
+    <p></p><a href="#knime-workflow">Knime Workflow</a></p>
+    <p></p><a href="#summary">Summary</a></p>
+  </div>
 </details>
-</center>
+</div>
 
 <hr> 
 
 ## About The Project
+
+
 The project provides a comprehensive analysis of jobs advertised on LinkedIn through a multi-platform data aggregation methodology to draw meaningful insights. The dataset is retrived from [Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data), and is undergone advanced data processing and analytical workflows. 
 
 The dataset has been uploaded into Azure to support scalable cloud-based solutions. In addition, a minor portion of the data is being stored in MongoDB for text analysis and exploration purposes. Because Azure services are quite costly, a cost-efficient local database has been established with MySQL Workbench for storage and queries.
