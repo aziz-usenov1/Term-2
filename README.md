@@ -347,6 +347,7 @@ _Conclusion_: The analysis reveals that LinkedIn consistently reports higher ave
 
 ## Summary
 
+In general, this project succeeded in working with Azure, MongoDB, a local MySQL database, API data extraction, and KNIME, along with preprocessing techniques - data cleaning and algorithms of cosine similarity and clustering of industry names for creating common categories both for LinkedIn and API-based data - in all hypotheses proved right according to the analysis.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
