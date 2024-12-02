@@ -140,7 +140,9 @@ This README provides a comprehensive guide on how we processed relational data f
    ```sql
    SELECT * FROM job_postings LIMIT 10;
    ```
-    
+#### ERR Diagram
+![EER Diagram](https://github.com/user-attachments/assets/6dff872d-b08c-4570-9a18-fce6ef1693a1)
+
 #### Stage 2: Transition to Azure SQL Database
 
 ##### Step 2.1: Configure Azure SQL Database
@@ -160,6 +162,7 @@ This README provides a comprehensive guide on how we processed relational data f
    - Authentication: SQL Login
    - Username: `{admin_username}`
    - Password: `{admin_password}`
+![azure-server](https://github.com/user-attachments/assets/386eb159-1d53-41af-9298-81595b52d908)
 
 #### Step 2.3: Import CSV Files into Azure
 1. Use Azure Data Studio's Import Wizard:
@@ -170,6 +173,7 @@ This README provides a comprehensive guide on how we processed relational data f
    ```sql
    SELECT TOP (10) * FROM dbo.job_postings;
    ```
+![azure-db](https://github.com/user-attachments/assets/f9c89fbf-c464-4ad8-b7ef-e944132d7122)
 
 #### Step 2.4: Optimize Resource Usage
 1. Clear working sessions to allow **auto-pause**
@@ -177,7 +181,78 @@ This README provides a comprehensive guide on how we processed relational data f
 2. Monitor resource usage:
    - Use the **Performance Overview** in Azure Portal.
    - Check DTU/vCore consumption periodically.
-  
+
+#### Step 3: Connection to KNIME
+
+This section details the process of connecting both the local MySQL database and Azure SQL Database to KNIME Analytics Platform. These steps include downloading drivers, setting up configurations, and performing test queries.
+
+---
+
+#### **Step 3.1: Connecting KNIME to Local MySQL Database**
+
+##### **Download MySQL JDBC Driver**
+1. Download the MySQL Connector/J (JDBC driver) from the [official MySQL website](https://dev.mysql.com/downloads/connector/j/).
+   - Select the appropriate version for your system and download the `.zip` file.
+2. Extract the `.jar` file (e.g., `mysql-connector-java-8.x.x.jar`) from the downloaded archive.
+3. Place the `.jar` file in a known directory for future reference.
+
+##### **Configure KNIME Database Driver**
+1. Open KNIME Analytics Platform.
+2. Navigate to **File > Preferences > KNIME > Databases**.
+3. Add a new database driver:
+   - Click **Add File...** and browse to the `.jar` file downloaded earlier.
+   - Assign an alias, e.g., `MySQL Driver`.
+
+##### **Set Up MySQL Connection Node**
+1. Drag and drop the **Database Connector** node from the KNIME Node Repository onto the workflow canvas.
+2. Configure the node:
+   - **Driver**: Select `MySQL Driver` from the dropdown.
+   - **Database URL**: `jdbc:mysql://localhost:3306/linkedin_jobs`
+     - Replace `linkedin_jobs` with your database name if different.
+   - **Authentication**:
+     - **Username**: Enter the MySQL username (default: `root` or your custom user).
+     - **Password**: Enter the MySQL password.
+3. Click **OK** to save.
+
+##### **Test the Connection**
+1. Connect a **Database Table Selector** node to the **Database Connector**.
+2. Open the configuration of the **Table Selector** node and type a query, e.g.:
+   ```sql
+   SELECT * FROM job_postings LIMIT 10;
+    ```
+
+Step 3.2: Connecting KNIME to Azure SQL Database
+
+### **Download Microsoft SQL JDBC Driver**
+1. Download the SQL Server JDBC driver from the [Microsoft website](https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server).
+   - Choose the appropriate `.zip` file for your platform.
+2. Extract the `.jar` file (e.g., `mssql-jdbc-9.x.x.jre8.jar`) from the archive.
+3. Save the `.jar` file to a known directory.
+![driver](https://github.com/user-attachments/assets/8d21901d-c09b-43c7-b616-eab57aa62411)
+
+### **Configure KNIME Database Driver**
+1. Open KNIME Analytics Platform.
+2. Navigate to **File > Preferences > KNIME > Databases**.
+3. Add a new database driver:
+   - Click **Add File...** and locate the `.jar` file downloaded earlier.
+   - Assign an alias, e.g., `SQL Server Driver`.
+
+#### **Set Up Azure SQL Connection Node**
+1. Drag and drop the **Database Connector** node from the KNIME Node Repository onto the workflow canvas.
+2. Configure the node:
+   - **Driver**: Select `SQL Server Driver` from the dropdown.
+   - **Database URL**: 
+     ```plaintext
+     jdbc:sqlserver://job-posting-2024.database.windows.net:1433;database=LinkedIn_Jobs
+     ```
+     - Replace `job-posting-2024` with your Azure SQL Server name.
+     - Replace `LinkedIn_Jobs` with your database name.
+   - **Authentication**:
+     - **Username**: Enter your Azure SQL admin username.
+     - **Password**: Enter your Azure SQL admin password.
+   - **Dialect**: Use `SQL-92` (default for this driver).
+![sample-output](https://github.com/user-attachments/assets/d63abb62-8919-4cf7-a1de-e021fa3a175e)
+
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
 <hr>
@@ -221,6 +296,8 @@ This section showcases the workflow for transforming, splitting, and integrating
 <hr>
 
 ### Knime Workflow
+
+![knime](https://github.com/user-attachments/assets/5207fc3a-9e11-4039-9150-9948901be802)
 
 ### Hypothesis Analysis
 
