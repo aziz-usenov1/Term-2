@@ -63,30 +63,24 @@ This section showcases the workflow for transforming, splitting, and integrating
   - Extracting relevant columns (`company_id` and `description`) from a [company.csv](MongoDB%20import/CSV%20files/companies.csv) file
   - Converting the data into a JSON format suitable for MongoDB
 - **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
-  - Splitting the JSON file into 4 smaller chunks to adhere to MongoDB's 16MB document size limit
-    - [companies_part1.json](MongoDB%20import/JSON%20output/companies_part1.json)
-    - [companies_part2.json](MongoDB%20import/JSON%20output/companies_part2.json)
-    - [companies_part3.json](MongoDB%20import/JSON%20output/companies_part3.json)
-    - [companies_part4.json](MongoDB%20import/JSON%20output/companies_part4.json)
+  - Splitting the JSON file into n smaller chunks to adhere to MongoDB's 16MB document size limit
 - **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
-    - need `password` within `connectin string` as *de_2_term_2*
+    - need `password` within `connectin string`
     - need `database name` labeled as `db`
     - need `folder name` labeled as `collection`
-- **KNIME Workflow Integration:**
-  - Connecting MongoDB to ***KNIME*** for further processing and analysis
-    - connect to MongoDB using the `MongoDB Connector` node in KNIME
-    - retrieve the data using the `MongoDB Reader` node
-    - read the content of a JSON column using the `Container Output (JSON)` node
-- **JSON Schema:** [companies.schema.json](MongoDB%20import/JSON%20Schema/companies.schema.json)
+- **JSON Schema:**
   - The schema ensures each JSON document adheres to the following structure:
     - **Root Type:** Array, containing objects.
     - **Object Properties:**
       - `company_id` (*string*): Unique identifier for each company.
-      - `description` (*string*): Textual description of the company.
+      - `job_id` (*string*): Unique identifier for each job.
+      - `description` from <ins>company</ins> (*string*): Textual description of the company.
+      - `description` from <ins>posts</ins> (*string*): Textual description of the post.
+      - `skills_desc` (*string*): Textual description of the skills.
     - **Required Fields:**
-      - Each object in the array must include both `company_id` and `description`
+      - Each object in the array must include both `company_id`, `job_id`, `skills_desc`, `description` for company and `description`for post
      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
