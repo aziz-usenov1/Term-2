@@ -264,12 +264,12 @@ This section details the process of connecting both the local MySQL database and
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
 
 **The main tasks include:**
-- **CSV to JSON Conversion:** [converter.py](MongoDB%20import/converter.py) 
+- **CSV to JSON Conversion:** [converter.py](Term2/Data_Preprocessing/MongoDB_Import/converter.py) 
   - Extracting relevant columns from a respective file
   - Converting the data into a JSON format suitable for MongoDB
-- **JSON Chunking:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
+- **JSON Chunking:** [chunking_and_mongodb_importing.py](Term2/Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
   - Splitting the JSON file into *`N`* smaller chunks to adhere to MongoDB's 16MB document size limit
-- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](MongoDB%20import/chunking_and_mongodb_importing.py)
+- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](Term2/Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
     - need `password` within `connectin string`
