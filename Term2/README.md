@@ -264,12 +264,12 @@ This section details the process of connecting both the local MySQL database and
 This section showcases the workflow for transforming, splitting, and integrating large datasets into a MongoDB database. 
 
 **The main tasks include:**
-- **CSV to JSON Conversion:** [converter.py](Term2/Data_Preprocessing/MongoDB_Import/converter.py) 
+- **CSV to JSON Conversion:** [converter.py](Data_Preprocessing/MongoDB_Import/converter.py) 
   - Extracting relevant columns from a respective file
   - Converting the data into a JSON format suitable for MongoDB
-- **JSON Chunking:** [chunking_and_mongodb_importing.py](Term2/Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
+- **JSON Chunking:** [chunking_and_mongodb_importing.py](Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
   - Splitting the JSON file into *`N`* smaller chunks to adhere to MongoDB's 16MB document size limit
-- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](Term2/Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
+- **Data Import to MongoDB:** [chunking_and_mongodb_importing.py](Data_Preprocessing/MongoDB_Import/chunking_and_mongodb_importing.py)
   - Importing the data into MongoDB through `from pymongo import MongoClient` library
     - need `connection string` labeled as `client`
     - need `password` within `connectin string`
@@ -355,7 +355,7 @@ _Conclusion_: The analysis demonstrates that LinkedIn consistently reports highe
 
 **Hypothesis 4**. LinkedIn-reported wages are consistently higher than BLS wages across key industries due to LinkedIn's focus on specialized, professional, and high-demand roles, compared to the broader coverage of the BLS data.
 
-❗️**Clusterings were applied to get common category names for both Linkedin dataset and API extracted data. In total, 25 category names were generated for analysis purposes even though the Silhouette Score showed the optimal number of clusters is 221. The processing can be found here: [industry_names.py](Term2/Data_Preprocessing/API_Analysis/industry_Clustering.ipynb)**
+❗️**Clusterings were applied to get common category names for both Linkedin dataset and API extracted data. In total, 25 category names were generated for analysis purposes even though the Silhouette Score showed the optimal number of clusters is 221. The processing can be found here: [industry_names.py](Data_Preprocessing/API_Analysis/industry_Clustering.ipynb)**
 
 ![hypothesis3](https://github.com/user-attachments/assets/522c41ef-1549-4a2d-be9e-d19667aa5e8a)
 
