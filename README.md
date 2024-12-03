@@ -307,14 +307,16 @@ We state the following *<ins>4 hypotheses</ins>*:
 
 **Hypothesis 1**. Senior roles are less likely to offer remote work options compared to entry- and mid-level positions.
 
-![hypothesis1](https://github.com/user-attachments/assets/ab75a43a-b429-40de-b890-7140d659283f)
+![hypothesis1](https://github.com/user-attachments/assets/179e8305-8f45-41d2-9941-7f0da66565ba)
+
 
 
 _Conclusion_: Based on the pie chart, senior-level roles are the least likely to offer remote work options, supporting the hypothesis that senior roles are less likely to provide remote work opportunities compared to entry- and mid-level positions.
 
 **Hypothesis 2**. SQL is more frequently required in IT and data-centric industries such as finance, healthcare, and e-commerce compared to other sectors.
 
-![hypothesis2](https://github.com/user-attachments/assets/5c24af1f-63a4-405e-a27b-50dad6788798)
+![hypothesis2](https://github.com/user-attachments/assets/92500dee-45a4-401d-a2e9-a75657354a90)
+
 
 
 _Conclusion_: The bubble chart shows that SQL is highly demanded in industries like IT Services and Software Development, with significant representation in data-centric sectors such as Financial Services and Healthcare. Thus, it supports the stated hypothesis.
