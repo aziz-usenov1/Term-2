@@ -84,7 +84,7 @@ This README provides a comprehensive guide on how we processed relational data f
 ### Detailed Steps
 
 #### 🔸 Stage 1: Setup Local MySQL Database
-#### 🔴 SQL workfile for creating Local Database: [MySQL Workbench](MySQL%20database/localdb.sql)
+#### 🔴 SQL workfile for creating Local Database: [MySQL Workbench](Term2/localdb.sql)
 ##### Step 1.1: Download Dataset
 - Go to the [LinkedIn Job Postings Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) on Kaggle.
 - Download the dataset, which consists of 11 CSV files.
