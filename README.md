@@ -197,6 +197,8 @@ This section details the process of connecting both the local MySQL database and
    - Select the appropriate version for your system and download the `.zip` file.
 2. Extract the `.jar` file (e.g., `mysql-connector-java-8.x.x.jar`) from the downloaded archive.
 3. Place the `.jar` file in a known directory for future reference.
+   
+![driver](https://github.com/user-attachments/assets/8d21901d-c09b-43c7-b616-eab57aa62411)
 
 ##### **Configure KNIME Database Driver**
 1. Open KNIME Analytics Platform.
@@ -230,7 +232,6 @@ This section details the process of connecting both the local MySQL database and
    - Choose the appropriate `.zip` file for your platform.
 2. Extract the `.jar` file (e.g., `mssql-jdbc-9.x.x.jre8.jar`) from the archive.
 3. Save the `.jar` file to a known directory.
-![driver](https://github.com/user-attachments/assets/8d21901d-c09b-43c7-b616-eab57aa62411)
 
 ##### **Configure KNIME Database Driver**
 1. Open KNIME Analytics Platform.
