@@ -301,7 +301,7 @@ This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly w
 **Process**
 
 - **Data Sources**
-  - **BLS API:** Provides official hourly wage data for all U.S. states and industries. Link to requst API can be found [here](https://www.google.com/urlq=https://data.bls.gov/registrationEngine/&sa=D&source=docs&ust=1733262284590055&usg=AOvVaw3K-UHWfDXyRH8dH_GXPVV9)
+  - **BLS API:** Provides official hourly wage data for all U.S. states and industries. Link to requst API can be found [here](https://data.bls.gov/registrationEngine/)
   - **LinkedIn Data:** Contains average hourly salary information by state and industry.
 - **Steps in the Analysis**
   - **API Integration:**
