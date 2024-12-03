@@ -14,6 +14,7 @@ Azizbek Ussenov, Guillermo Leal, Tatyana Yakushina, Yutong Liang
     <p></p><a href="#about-the-project">About The Project</a></p>
     <p></p><a href="#data-setup-on-the-cloud-azure-and-mysql-workbench">Data Setup on the cloud (Azure) and MySQL Workbench</a></p>
     <p></p><a href="#mongodb-data-integration-workflow">MongoDB Data Integration Workflow</a></p>
+    <p></p><a href="#bls-api-wage-analysis">BLS API Wage Analysis</a></p>
     <p></p><a href="#knime-workflow">Knime Workflow</a></p>
     <p></p><a href="#summary">Summary</a></p>
   </div>
@@ -292,6 +293,27 @@ This section showcases the workflow for transforming, splitting, and integrating
 
 **The Snapshot of MongoDB Cluster**
 ![](https://github.com/user-attachments/assets/93b0fc65-caa3-4aec-9374-97b379888e7e)
+<hr>
+
+## BLS API Wage Analysis
+This project utilizes the Bureau of Labor Statistics (BLS) API to fetch hourly wage data for 2023 across U.S. states. The analysis compares this data with average hourly wages from LinkedIn, providing insights into discrepancies and trends between federal economic data and a professional job platform.
+
+**Process**
+
+- **Data Sources**
+  - **BLS API:** Provides official hourly wage data for all U.S. states and industries. Link to requst API can be found [here](https://www.google.com/urlq=https://data.bls.gov/registrationEngine/&sa=D&source=docs&ust=1733262284590055&usg=AOvVaw3K-UHWfDXyRH8dH_GXPVV9)
+  - **LinkedIn Data:** Contains average hourly salary information by state and industry.
+- **Steps in the Analysis**
+  - **API Integration:**
+    - Queried the BLS API for 2023 hourly wage data using state-specific and industry-specific series IDs.
+    - Extracted and organized the data into a Pandas DataFrame.
+  - **Data Preparation:** 
+    - Mapped state names between the LinkedIn and BLS datasets to ensure consistency.
+    - Mapped clustered industry names between LinkedIn and BLS datasets for better consistency.
+    - Processed the LinkedIn dataset to calculate state-level and industry-level average hourly wages.
+
+<p align="right">(<a href="#readme-top"> 🔝 back to top</a>)</p>
+
 <hr>
 
 ## Knime Workflow
