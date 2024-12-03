@@ -326,7 +326,7 @@ _Conclusion_: The bubble chart shows that SQL is highly demanded in industries l
 ![hypothesis3](https://github.com/user-attachments/assets/f475789b-e48d-4e7a-a493-af651d49597e)
 
 
-_Conclusion_: The analysis demonstrates that LinkedIn consistently reports higher average hourly wages compared to the BLS across most U.S. states. This aligns with the hypothesis that LinkedIn focuses on professional and specialized roles, which typically offer higher wages. On a national level, LinkedIn wages are 24.58% higher than BLS wages, further supporting the idea that LinkedIn caters to higher-paying industries and job markets.
+_Conclusion_: The analysis demonstrates that LinkedIn consistently reports higher average hourly wages compared to the BLS across most U.S. states. On a national level, LinkedIn wages are 24.58% higher than BLS wages, further supporting the idea that LinkedIn caters to higher-paying industries and job markets.
 
 **Hypothesis 4**. LinkedIn-reported wages are consistently higher than BLS wages across key industries due to LinkedIn's focus on specialized, professional, and high-demand roles, compared to the broader coverage of the BLS data.
 
@@ -334,7 +334,7 @@ _Conclusion_: The analysis demonstrates that LinkedIn consistently reports highe
 
 ![hypothesis3](https://github.com/user-attachments/assets/522c41ef-1549-4a2d-be9e-d19667aa5e8a)
 
-_Conclusion_: The analysis reveals that LinkedIn consistently reports higher average hourly wages compared to the BLS across the selected industries. This supports the hypothesis that LinkedIn data focuses on specialized and professional roles, which command higher wages. Industries such as Professional and Business Services and General Manufacturing show significant differences, indicating a disparity between LinkedIn's professional-oriented dataset and the broader scope of the BLS. These findings emphasize the importance of considering data sources' scope when analyzing wage trends.
+_Conclusion_: The table reveals that LinkedIn consistently reports higher average hourly wages compared to the BLS across the selected industries. This supports the hypothesis that LinkedIn data focuses on specialized and professional roles, which command higher wages. Industries such as Professional and Business Services and General Manufacturing show significant differences, indicating a disparity between LinkedIn's professional-oriented dataset and the broader scope of the BLS. These findings emphasize the importance of considering data sources' scope when analyzing wage trends.
 
 <p align="right">(<a href="#readme-top">🔝 back to top</a>)</p>
 
