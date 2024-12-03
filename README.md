@@ -6,7 +6,9 @@
 **Contributors:**
 Azizbek Ussenov, Guillermo Leal, Tatyana Yakushina, Yutong Liang
 ## Linkedin Job Postings Analysis
-<img src="https://github.com/user-attachments/assets/335fd936-b82c-4419-bd29-c0cf0f9077d6" alt="Linkedin" width="400" height="300" align="center">
+<img src="https://github.com/user-attachments/assets/94c30a65-0172-461f-b422-728b1e724fa2" alt="Linkedin" width="600" height="350" align="center">
+
+Source: [Finlink](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffinlink.co.uk%2Felevate-your-linkedin-profile-a-guide-before-partnering-with-finlink%2F&psig=AOvVaw2FXq4NK-e_Lmqt5hR4GEYk&ust=1733347094544000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCPtLzDjIoDFQAAAAAdAAAAABAE)
 
 <details open>
   <summary>Table of Contents</summary>
